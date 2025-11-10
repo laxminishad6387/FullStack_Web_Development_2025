@@ -1,0 +1,275 @@
+<!-- Introduction to Version Control Systems -->
+1.Definition: Version control systems (VCS) are tools that help manage changes to source code over time.
+
+2.Importance: VCS are crucial for maintaining code history, enabling collaborative development, and ensuring project integrity.
+
+
+
+
+<!-- Benefits of Version Control Systems -->
+1.Tracking Changes: VCS tracks every modification made to the code, providing a detailed history of changes.
+
+2.Reverting to Previous Versions: Allows developers to revert to earlier versions of the codebase, helping to recover from errors.
+
+3.Managing Multiple Versions: Facilitates handling different versions of the code, such as release versions and experimental branches.
+
+
+
+
+
+<!-- Unique Features and Benefits of Git -->
+1.Distributed Version Control: Git's distributed architecture allows every user to have a complete copy of the repository, enhancing collaboration and resilience.
+
+2.Branching: Git enables easy creation and management of branches, allowing multiple features and bug fixes to be developed concurrently.
+
+3.Merging: Powerful merging capabilities facilitate the integration of changes from different branches.
+
+
+
+
+
+<!-- Setting Up Git On Windows -->
+1.Installation on Windows:  
+Download the installer from Git's official website and follow the setup instructions.Link ([text](https://git-scm.com/))
+
+2.When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
+
+
+
+
+<!-- Setting Up Git On Mac -->
+1.Download the latest Git for Mac installer.Link ([text](https://sourceforge.net/projects/git-osx-installer/files/))
+
+2.Follow the prompts to install Git.
+
+3.Open a terminal and verify the installation was successful by typing git --version:
+$ git --version
+git version 2.9.2
+
+
+
+
+
+% <!--Setting Up Git On Linux-->
+1. From your shell, install Git using apt-get:
+     $ sudo apt-get update
+     $ sudo apt-get install git
+
+2.Follow the prompts to install Git.
+
+3. Verify the installation was successful by typing git --version:
+    $ git --version    
+    git version 2.9.2
+
+
+
+
+
+
+<!-- Configuring Git with Username and Email -->
+1.Open a Command Prompt (or Git Bash if during installation you elected not to use Git from the Windows Command Prompt).
+
+2.Global Configuration: 
+ Set the global username and email for commits using the commands: 
+      git config --global user.name "Your Name" 
+      and 
+      git config --global user.email "youremail@example.com".
+
+3.Verification: 
+Verify the configuration with git config --list to ensure the information is correct.
+
+
+
+
+<!--make directiory in command prompt -->
+1. use this command : mkdir directiory name(like python)
+2. then move in directiory using this command: cd directiory name
+
+
+
+
+
+<!-- Initialize a New Git Repository -->
+1.Open your terminal or command prompt.
+
+2.Navigate to your project directory using the cd command. 
+   cd your project name
+
+3.Once you’re inside the project directory, run the following command to initialize a new Git repository:
+      git init    <!--git init git ko perticular directory me initialize krny me help krta hai-->
+      ls  <!--this command not for window..plz use window cammand for window. (we use dir in place of ls in window system) -->
+      ls -a  <!--this command not for window..plz use window cammand for window. (we use dir in place of ls in window system) -->
+      vim .git  <!--this command not for window..plz use window cammand for window -->
+
+4.Create Sample Files
+
+    Let’s create a few sample files. You can use any text editor or IDE to do this. Here’s an example:
+    
+    Create an index.html file for your homepage.
+    Add a style.css file for styling.
+    Optionally, include an images folder with some placeholder images.
+    Feel free to add more files based on your portfolio’s structure.
+
+5.Check Repository Status:
+
+    After creating or placing your sample files, run the following command to check the status of your repository
+    git status
+   return<!-- C:\Users\Admin\laxmi>git status
+    On branch master
+    No commits yet
+    nothing to commit (create/copy files and use "git add" to track)
+     -->
+
+6.Check file:
+     vim index.txt <!--it does not work in window-->
+     code index.txt <!--it a alternative of vom index.txt for window support-->
+
+7.Check Repository Status after creating file:
+
+     git status 
+     <!-- C:\Users\Admin\laxmi>git status
+       On branch master
+       
+       No commits yet
+       
+       Untracked files:
+         (use "git add <file>..." to include in what will be committed)
+               index.txt
+       
+       nothing added to commit but untracked files present (use "git add" to track) -->
+
+       
+
+
+
+
+<!-- Adding Files to the Staging Area -->
+1.After creating or placing your sample files in the project directory, you’ll want to add them to the staging area. The staging area is where you prepare files for committing.
+
+2.To add specific files, use the following command (replace <filename> with the actual filename):
+    git add <filename>  <!--By running this command our file is moved from the unstage area to the staging area.-->
+
+3.To add all files (including any new files), use:
+    git add .     <!--By running this command our file is moved from the unstage area to the staging area.-->
+
+4.The git add command stages changes for the next commit.
+
+5.check status :
+     git status
+     <!-- C:\Users\Admin\laxmi>git status
+         On branch master
+         
+         No commits yet
+         
+         Changes to be committed:
+           (use "git rm --cached <file>..." to unstage)
+                 new file:   index.txt -->
+
+
+
+
+
+
+<!-- Committing Changes: -->
+1.Once your files are in the staging area, it’s time to commit them. A commit represents a snapshot of your project at a specific point in time.
+
+2.Use the following command to commit your changes along with a meaningful message:
+     git commit -m "Initial commit"   <!--commit the current file-->
+
+     <!-- C:\Users\Admin\laxmi>git commit -m "add new file index.txt"
+        [master (root-commit) 9b08568] add new file index.txt
+         1 file changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 index.txt -->
+        
+3.Replace "Initial commit" with a description that reflects what you’ve done in this commit. For example, if you’ve added your homepage and styling, you could use "Added initial HTML and CSS files" as your commit message.
+
+
+4.check status :
+    git status
+    <!-- C:\Users\Admin\laxmi>git status
+       On branch master
+       nothing to commit, working tree clean -->
+
+
+
+
+
+<!--move back from staging area to unstage area-->
+    git restore --staged index.txt <!--unstage only index.txt file-->
+   
+    git restore --staged .  <!--unstage all file -->
+
+
+
+
+<!--Viewing Commit History:-->
+1.To verify that your commit was successful, run:
+   git log
+
+
+
+
+
+
+<!--What is GitHub?-->
+1.GitHub is a web-based platform for version control and collaboration using Git.
+
+2.It allows developers to store, manage, and track changes to their code.
+
+3.Facilitates team collaboration through features like pull requests, code reviews, and issue tracking.
+
+4.GitHub provides tools for managing issues, bugs, and feature requests.
+
+5.It’s a hub for open-source projects and fosters a global developer community.
+
+6.Developers can host static websites directly from their repositories.
+
+7.GitHub builds on Git, adding features like a web-based graphical interface, access control, and collaboration tools
+
+
+
+
+
+
+
+
+<!--Key Features-->
+1.Version Control: GitHub allows you to manage different versions of your code, making it easy to switch between them.
+
+2.Access Control: You can control who has access to your repositories (public or private).
+
+3.Bug Tracking: GitHub provides tools for tracking and managing issues (bugs, feature requests, etc.).
+
+4.Task Management: You can organize your work using project boards, milestones, and labels.
+
+5.Continuous Integration: GitHub integrates with CI/CD tools, allowing automated testing and deployment.
+
+6.Wikis: Each project can have its own wiki for documentation.
+
+
+
+
+
+
+<!--Personal Portfolio Website Project-->
+1.Create a new repository on GitHub.
+
+2.Clone the repository locally:
+     git clone <repository name>
+     <!--C:\Users\Admin\laxmi>git clone https://github.com/laxminishad6387/Pyhton_Language.git
+        Cloning into 'Pyhton_Language'...
+        remote: Enumerating objects: 19, done.
+        remote: Counting objects: 100% (19/19), done.
+        remote: Compressing objects: 100% (8/8), done.
+        remote: Total 19 (delta 2), reused 19 (delta 2), pack-reused 0 (from 0)
+        Receiving objects: 100% (19/19), 4.65 KiB | 680.00 KiB/s, done.
+        Resolving deltas: 100% (2/2), done.-->
+
+
+3.set branch 
+    git branch -M main
+
+4. remote on github
+   git remote add origin <repository name> <!--like: https://github.com/laxminishad6387/FullStack_Web_Development_2025.git-->
+
+5.git push -u origin main
