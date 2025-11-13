@@ -1,0 +1,7 @@
+1.Create a web-based application using HTML, CSS, and JavaScript.
+
+2.Set up a grid-based drawing interface for pixel art.
+
+3.Implement interactive features such as color selection, canvas clearing, and grid resizing.
+
+4.Gain hands-on experience with event handling in JavaScript.
