@@ -7,6 +7,9 @@ let inp=document.querySelector('input');
 // Select the first <div> element from the page
 let div=document.querySelector('div');
 
+// Select the  <button> element from the page
+let doubleClick=document.getElementById('doubleClick');
+
 
 
 // Add an event listener to the button that listens for a "click" event
@@ -39,4 +42,13 @@ div.addEventListener('mouseover',()=>{
 // 'mouseout' event triggers when the mouse pointer leaves the div area
 div.addEventListener('mouseout',()=>{
       console.log("mouse out from the div")    // Logs when mouse leaves the div
+})
+
+
+
+
+
+// 'dblclick' event triggers when the button is double-clicked
+doubleClick.addEventListener('dblclick',()=>{
+      alert("Button Double Clicked!")   // Show an alert message on double click
 })
