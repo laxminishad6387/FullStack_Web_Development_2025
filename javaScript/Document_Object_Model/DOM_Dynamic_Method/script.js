@@ -12,3 +12,4 @@ ul.replaceChild(newli,li); // Replace the old li with newli
 // Removing an element
 ul.removeChild(newli); // This will remove the newli from the ul
 
+
