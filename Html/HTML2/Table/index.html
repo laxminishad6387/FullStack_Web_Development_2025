@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Table</title>
+      <style>
+            table,th,td{
+                  border: 1px solid black;
+                  
+            }
+            table{
+                  background-color: aqua;
+               
+            }
+            tr{
+                  background-color: rgb(239, 138, 5);
+            }
+      </style>
+</head>
+<body>
+          <!-- ================================================
+           TABLE START
+           ================================================= -->
+      <table>
+              <!-- 
+            THEAD = Table Header Section
+            It groups all header rows.
+            Helps in accessibility + styling.
+            -->
+            <thead>
+                     <!-- 
+                         <th> creates header cells (bold + center by default).
+                         
+                         th attributes:
+                           colspan=""
+                           rowspan=""
+                           scope="col" / "row"
+                           style=""
+                           align="left/center/right" (old)
+                         -->
+                   <tr >
+                         <th>name</th>
+                         <th >course</th>
+                         <th >age</th>
+                        
+                   </tr>
+            </thead>
+              <!-- 
+            TBODY = Body section of the table
+            Contains main table content.
+            -->
+            <tbody>
+                  
+                   <!-- =====================
+                        FIRST ROW
+                        ===================== -->
+                   <tr>
+                           <!-- 
+                        colspan="2":
+                        Means this single cell will cover 2 columns horizontally.
+                        Example:
+                           |   ritika (covers 2 columns)   |   ?   |
+                        -->
+                        <td colspan="2">ritika</td>
+                           <!-- 
+                        rowspan="2":
+                        Means this cell will stretch vertically for 2 rows.
+                        Example:
+                        row1: fsd
+                        row2: fsd (actually same cell)
+                        -->
+                        <td rowspan="2">fsd</td>
+                         <!-- 
+                        Removed 3rd cell because colspan + rowspan manage columns.
+                        -->
+                        <!-- <td>23</td> -->
+                  </tr>
+                  <!-- =====================
+                       SECOND ROW
+                       ===================== -->
+                  <tr>
+                        <td>megha</td>    <!-- Normal cell -->
+                        <td>fsd</td>
+                          <!-- 3rd cell removed because above cell uses rowspan -->
+                        <!-- <td>24</td> -->
+                  </tr>
+          </tbody>
+          
+           
+      </table>
+</body>
+</html>
