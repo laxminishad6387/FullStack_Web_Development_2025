@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>List</title>
+</head>
+<body>
+         <!-- ===========================================
+           UNORDERED LIST (UL)
+           =========================================== -->
+       <h1>unordered list</h1>
+        <!-- 
+      <ul> = Unordered List (bullet points)
+      ATTRIBUTES:
+         - type (deprecated in HTML5, not recommended)
+         - style (CSS styling)
+      CSS VALUES for list-style-type:
+         circle
+         square
+         disc (default)
+         none (no bullet)
+         image-url (custom image bullet)
+      -->
+      <ul style="list-style-type: circle;" >
+            <li>One</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+      </ul>
+
+
+
+
+         <!-- ===========================================
+           NESTED UL INSIDE UL
+           =========================================== -->
+      <h1> unordered list present inside the unordered list</h1>
+
+            <!-- 
+      Using decimal with <ul> is allowed through CSS.
+      Normally decimal is used for <ol>.
+      list-style-type values for UL:
+         circle, square, disc, none, etc.
+      -->
+      <ul style="list-style-type: decimal;" >
+            <li>apple</li>
+              <!-- Nested list inside li -->
+            <li>mango
+                   <!-- INNER Unordered List -->
+                  <!-- 
+                  Without CSS, this uses default bullets.
+                  You can style separately:
+                  style="list-style-type: square;"
+                  -->
+                  <ul>
+                        <li>green mango</li>
+                        <li>orange mango</li>
+                  </ul>
+            </li>
+            <li>graphs</li>
+            <li>banana</li>
+      </ul>
+
+      
+
+
+         <!-- ===========================================
+           ORDERED LIST (OL)
+           =========================================== -->
+       <h1>ordered list</h1>
+        <!-- 
+      <ol> = Ordered List (numbering)
+      ATTRIBUTES of <ol>:
+         type="I"  → Roman (I, II, III)
+         type="i"  → small Roman (i, ii, iii)
+         type="A"  → capital letters (A, B, C)
+         type="a"  → small letters (a, b, c)
+         type="1"  → numbers (1, 2, 3) default
+         start="5" → numbering starts from 5
+         reversed  → numbering reverse hoti hai
+      -->
+       <ol type="I" >
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+       </ol>
+
+
+
+
+         <!-- ===========================================
+           NESTED OL INSIDE OL
+           =========================================== -->
+       <h1>ordered list present inside the ordered list</h1>
+         <!-- Using type="a" for alphabet numbering -->
+       <ol type="a" >
+            <li>apple</li>
+              <!-- Nested Ordered List -->
+            <li>mongo
+                   <!-- Default numbering (1, 2, 3...) -->
+                 <ol>
+                  <li>one </li>
+                  <li>two</li>
+                 </ol>
+            </li>
+            <li>banana</li>
+            <li>graphs</li>
+       </ol>
+
+
+
+       
+
+
+        <!-- ===========================================
+           MIXED LIST (UL + OL)
+           =========================================== -->
+        <h1>ordered list present inside the unordered list</h1>
+        <!-- Main Unordered List -->
+        <ul>
+            <li>red</li>
+            <!-- Ordered list inside UL -->
+            <li>blue
+                  <ol>
+                        <li>dark blue</li>
+                        <li>light blue</li>
+                  </ol>
+            </li>
+            <li>black</li>
+        </ul>
+</body>
+</html>
