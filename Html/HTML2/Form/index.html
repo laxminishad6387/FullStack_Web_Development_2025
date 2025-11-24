@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form</title>
+      <style>
+           
+            form{
+                  background-color: rgb(241, 252, 252);
+                  height: 400px;
+                  width: 300px;
+                  
+            }
+      </style>
+</head>
+<body>
+       <!-- ====================================================
+          FORM TAG START
+          ====================================================
+     -->
+     <!-- 
+     <form> = collects data from user.
+     IMPORTANT ATTRIBUTES:
+       action="" → where to send data (URL)
+       method="get" or "post"
+          GET  → shows data in URL (not secure)
+          POST → secure, not shown in URL  (recommended)
+
+     Other attributes:
+       autocomplete="on/off"
+       enctype="multipart/form-data" (when uploading files)
+     -->
+     <form action=""  method="post">
+          <!-- ==========================
+           NAME INPUT
+           ========================== -->
+      <div>
+             <!-- 
+               <label> connects text with input using "for" & "id"
+               This improves accessibility.
+               -->
+               <label for="name">Enter your name</label>
+                 <!-- 
+               INPUT TYPE = text
+               ATTRIBUTES:
+                 id="name" → must match label "for"
+                 name="username" → important for backend
+                 placeholder → hint text
+                 required → form will not submit without input
+                 maxlength="20" (optional)
+                 minlength="3" (optional)
+               -->
+               <input type="text" id="name" name="username" placeholder="user name here" required>
+      </div>
+      <br>
+        <!-- ==========================
+           EMAIL INPUT
+           ========================== -->
+       <div>
+               <label for="email">Enter your email id</label>
+               <input type="email" id="email" name="useremail" placeholder="user email here"  required  >
+      </div>
+      <br>
+        <!-- ==========================
+           MOBILE NUMBER
+           ========================== -->
+      <div>
+               <label for="mobile">Enter your mobile</label>
+                <!-- 
+               INPUT type="number"
+               Other useful attributes:
+                 min="1000000000"
+                 max="9999999999"
+                 pattern="[0-9]{10}" → exact 10 digits
+               -->
+               <input type="number" id="mobile" name="usermobile" placeholder="user mobile number here" required>
+      </div>
+      <br>
+       <!-- ==========================
+           PASSWORD
+           ========================== -->
+      <div>
+               <label for="password">Enter your password</label>
+                <!-- 
+               type="password" hides typed characters.
+
+               Useful attributes:
+                 minlength="6"
+                 maxlength="16"
+                 pattern="(?=.*[A-Z])(?=.*[0-9]).{6,}"
+               -->
+               <input type="password" id="password" name="userpassword" placeholder="user password here" required>
+      </div>
+      <br>
+         <!-- ==========================
+           RADIO BUTTONS (Gender)
+           ========================== -->
+       <div>
+               <label for="gender">select your gender</label>
+               <input type="radio" name="usergender" id="gender" value="male">Male
+               <input type="radio" name="usergender" id="gender" value="female">Female
+               <input type="radio" name="usergender" id="gender" value="na">NA
+      </div>
+      <br>
+        <!-- ==========================
+           SELECT (Dropdown)
+           ========================== -->
+      <div>
+            <label for="city">Select your city</label>
+          <select name="usercity" id="city">
+            <option value="kanpur">Kanpur</option>
+            <option value="delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+          </select>
+      </div>
+      <br>
+         <!-- ==========================
+           TEXTAREA
+           ========================== -->
+    <div>
+      <label for="textarea">Enter your suggestion</label>
+         <!-- 
+      textarea attributes:
+        rows="6" → height
+        cols="10" → width (in characters)
+        minlength="10"
+        maxlength="100"
+        placeholder="write here..." (optional)
+      -->
+      <textarea name="usertext" id="textarea" minlength="10" maxlength="100" cols="10" rows="6" required></textarea>
+    </div>
+      <!-- 
+    button type="submit" → form submit karta hai
+    button type="reset" → form ko clear karta hai
+
+    You can also use:
+      <input type="submit">
+      <input type="reset">
+      <button disabled> → disabled button
+    -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    
+     
+     </form> 
+</body>
+</html>
