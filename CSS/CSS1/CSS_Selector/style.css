@@ -1,0 +1,68 @@
+/* ---------------------------
+   ID SELECTOR
+   # (hash) ka use karke banate hai.
+   Ye sirf ek unique element ko target karta hai.
+   Yaha #heading se <h1 id="heading"> select ho raha hai.
+---------------------------- */
+#heading{
+      color: aqua;
+      background-color: black;
+}
+
+
+
+
+/* ---------------------------
+   CLASS SELECTOR
+   . (dot) ka use hota hai.
+   Ek class ko multiple elements par apply kiya ja sakta hai.
+   Yaha .paragraph dono <p> tags par apply ho rahi hai.
+---------------------------- */
+.paragraph{
+      color: bisque;
+      background-color: blue;
+}
+
+
+
+
+
+/* ---------------------------
+   TAG (ELEMENT) SELECTOR
+   Directly HTML tag ka naam likhte hain.
+   Yaha h3 tag ko style kiya gaya hai.
+---------------------------- */
+h3{
+      color: palevioletred;
+      background-color: chartreuse;
+}
+
+
+
+
+
+/* ---------------------------
+   GROUPING SELECTOR
+   Multiple selectors ko comma (,) se group karke 
+   same CSS apply ki jaati hai.
+   Yaha h2 aur div dono ko same styling di gayi hai.
+---------------------------- */
+h2,div{
+      background-color: chocolate;
+      height: 50px;
+}
+
+
+
+
+
+/* ---------------------------
+   UNIVERSAL SELECTOR (*)
+   Sare HTML elements par apply hota hai.
+   Yaha margin aur padding 0 ki gayi hai 
+   taaki default spacing remove ho jaye.
+---------------------------- */
+*{
+      margin: 0px;
+      padding: 0px;
+}
