@@ -1,0 +1,48 @@
+p{
+     
+      text-decoration:underline;
+        /* VALUES:
+         underline  → Neeche line
+         overline   → Upar line
+         line-through → Beech se cut line
+         none       → Koi line nahi
+      */
+
+
+      line-height: 50px;
+         /* VALUES:
+         normal   → Browser default
+         1, 1.5, 2 → Number ratio (recommended)
+         px, %, em → Fixed height (50px, 120%, 2em)
+      */
+
+
+      color: blue;
+
+     
+      letter-spacing: 4px;
+          /* VALUES:
+         normal → default spacing
+         positive px → letters door (2px, 4px)
+         negative px → letters pass (-1px)
+      */
+
+
+      word-spacing: 10px;
+          /* VALUES:
+         normal
+         positive px → words dur (5px, 10px)
+         negative px → words pass (-2px)
+      */
+
+
+      text-transform: uppercase;
+          /* VALUES:
+         uppercase → SARA CAPITAL
+         lowercase → sara small
+         capitalize → Har word ka first letter capital
+         none → original jaisa
+      */
+    
+}
+
