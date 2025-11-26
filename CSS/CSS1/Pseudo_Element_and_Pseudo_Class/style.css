@@ -1,0 +1,67 @@
+/* ---------------- PSEUDO CLASSES ---------------- */
+
+/* :hover → anchor tag par mouse le jate hi color change karega */
+a:hover{
+      color: peru;
+}
+
+
+
+/* :focus → input box par click/typing karte waqt border change karega */
+input:focus{
+      border: 5px solid brown;
+}
+
+
+
+/* first-child → har UL ka pehla li red hoga */
+ul li:first-child{
+      color:red;
+}
+
+
+
+/* last-child → har UL ka last li blue hoga */
+ul li:last-child{
+      color: blue;
+}
+
+
+
+/* odd number wale li (1,3,5...) ka background chartreuse hoga */
+li:nth-child(odd){
+      background-color: chartreuse;
+}
+
+
+
+/* even number wale li (2,4,6...) ka background aqua hoga */
+li:nth-child(even){
+      background-color: aqua;
+}
+
+
+
+/* Exact 3rd li ka color red kar dega (chaahe wo odd ho ya even) */
+li:nth-child(3){
+      background-color: red;
+}
+
+
+
+
+
+
+/* ---------------- PSEUDO ELEMENTS ---------------- */
+
+/* ::first-letter → h2 aur p ke first letter ko style karega */
+p::first-letter ,h2::first-letter{
+      color: crimson;
+      font-size: xx-large;
+}
+
+
+/* ::after → h2 aur p ke baad extra text automatically add karega */
+p::after ,h2::after{
+      content:"   end !";  /* quotes jaroori hote hain */
+}
