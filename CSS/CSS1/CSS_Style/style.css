@@ -1,0 +1,9 @@
+/* EXTERNAL CSS:
+Alag CSS file (style.css) me likhi gayi CSS, jise <link> tag se HTML me connect kiya gaya hai.
+Is code me p tag ke liye external CSS use ki gayi hai. */
+
+
+p{
+      color: blanchedalmond;
+      background-color: brown;
+}
