@@ -1,0 +1,94 @@
+/* Reset default browser spacing so layout predictable rahe */
+*{
+      margin: 0px;
+      padding: 0px;
+        /* margin, padding ko 0 karne se browser default spacing remove ho jata hai.
+         Isse cross-browser consistency milti hai.
+         Alternative: use a CSS reset or normalize.css for more thorough reset. */
+}
+
+
+/* ---------------- BOX 1 ---------------- */
+
+#box1{
+      height: 200px;   /* Fixed height: 200px (px, %, vh, em bhi use kar sakte hai) */
+      width: 200px;       /* Fixed width: 200px (responsive ke liye % ya max-width use kar skty hai) */
+      background-color: lightblue;    /* Background color - koi bhi named color / hex / rgb / rgba / hsl use ho sakta hai */
+
+     float: left;
+            /* float: left → Element ko normal document flow se partially nikal deta hai
+         - Element left side par "float" ho jata hai
+         - Uske baad aane wala inline content (text, inline elements) uske around flow kar sakta hai
+         - Block elements jo float turn ke baad aate hain, agar unko clear nahi kiya gaya toh woh float ke side me wrap kar sakte hain
+         VALUES: left | right | none (default)
+         USE CASES:
+            - Text wrapping around images
+            - Simple column-like layouts (legacy)
+         IMPORTANT:
+            - Float lete hi parent container ka height collapse ho sakta hai (parent floated children ki height ko wrap nahi karta)
+            - Modern replacement: use flexbox/grid for layout */
+         margin-right: 10px;
+           /* margin-right → Box ke right side me extra gap
+         - Positive values element ko doosre element se door karte hain
+         - Negative values bhi possible hain (careful use)
+         USE: spacing between floated boxes */
+}
+
+/* ---------------- BOX 2 ---------------- */
+#box2{
+      height: 200px;
+      width: 200px;
+      background-color: lightcoral;
+     float: left;
+        /* Same as #box1: ye bhi left float hai, isliye dono boxes ek hi horizontal line me aa sakte hain
+         BUT agar parent width chhoti ho ya margins/whitespace add ho → wrapping ho sakta hai */
+
+      /* Agar aap chahte ho dono floated boxes ek row me consistent rahein to:
+         - ensure parent width sufficient ho (e.g., width: 100% and boxes combined width + margins <= 100%)
+         - ya use box-sizing: border-box and % widths, and remove unwanted whitespace/margins
+         - ya use modern layout: display:flex on parent */
+         
+}
+
+
+/* ---------------- BOX 3 ---------------- */
+#box3{
+      height: 200px;
+      width: 200px;
+      background-color: rgb(235, 4, 4);
+     float: right;
+                /* float: right → Element ko right side me float karta hai
+         - Left-floated elements stack from left to right
+         - Right-floated elements stack from right to left
+         USE CASE:
+           - Aligning small elements to right side (buttons, images)
+         INTERACTION WITH OTHERS:
+           - If you have left-floats and right-floats, inline content can flow in the middle area
+           - Floats do not change the normal flow height of parent unless cleared or parent is made to contain floats */
+
+         
+}
+
+
+/* ---------------- BOX 4 (Clear) ---------------- */
+#box4{
+      height: 200px;
+      width: 200px;
+      background-color: lightgreen;
+   clear: both;
+           /* clear: both → Is element ko dono sides ke floated elements ke *neeche* shift kar deta hai
+         - Agar pehle koi left/right floats hain toh #box4 unke niche start karega
+         - VALUES: left | right | both | none (default)
+         WHEN TO USE:
+           - Jab aap chahte ho ki koi block floated items ke baad new line me aaye aur floats ke side me wrap na ho
+         COMMON USE:
+           - Footer ko floated columns ke baad clear karne ke liye
+           - Clearing technique to avoid layout overlap
+         NOTE:
+           - clear: both lagane se element pure line-break jaisa behaviour leta hai
+           - clear tab lagao jab aapko floats se nikalna ho, warna modern approach: use clearfix or make parent contain floats */
+
+         
+}
+
+
