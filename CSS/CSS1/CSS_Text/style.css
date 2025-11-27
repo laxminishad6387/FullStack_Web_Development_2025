@@ -43,6 +43,47 @@ p{
          capitalize → Har word ka first letter capital
          none → original jaisa
       */
-    
+
+
+
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Font style set karega (fall-back fonts bhi included) */
+
+
+
+      font-size: x-large;
+       /* x-large → Text ka size bada ho jayega */
+
+
+
+    font-weight: bolder;
+    /* bolder → Text bahut bold ho jayega */
+
+
+
+    font-style: italic;
+       /* italic → Text tilted/italic style me show hoga */
+
+
+
+    text-indent: 100px;
+    /* 100px → Paragraph ki first line 100px left se andar start hogi */
+}
+h1{
+     
+      text-decoration: underline;
+         /* underline → Heading ke neeche line show hogi */
+
+
+      color: red;
+        /* red → Heading ka color red */
+
+
+      font-family: 'Courier New', Courier, monospace;
+         /* Font style set karega (monospace family) */
+
+
+      text-align: center;
+       /* center → Heading ko horizontally center me show karega */
 }
 
