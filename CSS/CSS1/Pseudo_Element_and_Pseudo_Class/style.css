@@ -1,29 +1,52 @@
 /* ---------------- PSEUDO CLASSES ---------------- */
+/* Pseudo-classes ka use tab hota hai jab user kisi element ke sath interact kare 
+   jaise hover karna, click karna, focus karna, visited link dekhna, etc. */
 
-/* :hover → anchor tag par mouse le jate hi color change karega */
+/* :hover → Mouse le jate hi anchor link ka color change hoga */
 a:hover{
-      color: peru;
+      color: peru;    /* VALUE: koi bhi CSS color de sakte hain */
+}
+
+
+/* :visited → User ne jis link ko pehle click kiya ho uska color change karta hai */
+a:visited{
+      color: green;     /* VALUE: koi bhi color */
+}
+
+
+/* :hover → Button par pointer lane par background change */
+button:hover{
+      background-color: lightblue;    /* VALUE: koi bhi color */
 }
 
 
 
-/* :focus → input box par click/typing karte waqt border change karega */
+
+/* :active → Button press karte waqt turant 1–2 sec ke liye style apply hota hai */
+button:active{
+      background-color: yellow;     /* VALUE: koi bhi color */
+}
+
+
+
+/* :focus → Input field me click ya typing karte waktu border/style change hota hai 
+   UX improve karta hai, user ko highlight milta hai */
 input:focus{
-      border: 5px solid brown;
+      border: 5px solid brown;     /* VALUE: px + color apni choice se */
 }
 
 
 
-/* first-child → har UL ka pehla li red hoga */
+/* first-child → Har UL ke sirf pehle li element ko target karega */
 ul li:first-child{
-      color:red;
+      color:red;     /* VALUE: koi bhi color */
 }
 
 
 
-/* last-child → har UL ka last li blue hoga */
+/* last-child → Har UL ke last li element ko target karega */
 ul li:last-child{
-      color: blue;
+      color: blue;    /* VALUE: koi bhi color */
 }
 
 
@@ -51,17 +74,38 @@ li:nth-child(3){
 
 
 
-
 /* ---------------- PSEUDO ELEMENTS ---------------- */
+/* Pseudo-elements ka use kisi element ke **part** ko target karne ke liye hota hai
+   jaise first letter, first line, before text, after text, selected text, etc. */
 
-/* ::first-letter → h2 aur p ke first letter ko style karega */
+/* ::first-letter → h2 aur p ke first letter ko alag style karega */
 p::first-letter ,h2::first-letter{
       color: crimson;
-      font-size: xx-large;
+      font-size: xx-large;    /* VALUE: xx-large, large, px based, etc. */
 }
 
 
-/* ::after → h2 aur p ke baad extra text automatically add karega */
+
+/* ::after → h2 aur p ke baad automatic content add karega
+   Mostly decoration, auto notes, emojis, arrows, quotes ke liye use hota hai */
 p::after ,h2::after{
       content:"   end !";  /* quotes jaroori hote hain */
 }
+
+
+
+/* ::selection → Text select karne par background aur color change hota hai */
+p::selection{
+      background-color: yellow;     /* VALUE: koi bhi background color */
+      color: black;               /* VALUE: koi bhi color */
+}
+
+
+
+/* ::placeholder → Input box ke placeholder (hint text) ka color / style set karta hai */
+input::placeholder{
+     color: rgb(244, 8, 126);             /* VALUE: koi bhi color */
+     background-color: lightgreen;         /* VALUE: koi bhi background color */
+}
+
+
