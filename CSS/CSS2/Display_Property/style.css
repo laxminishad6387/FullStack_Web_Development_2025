@@ -1,0 +1,67 @@
+*{
+      margin: 0px;
+      padding: 0px;
+}
+h1{
+      background-color: lightpink;
+         /* background-color → Element ke piche color fill karta hai
+         VALUE: koi bhi color (named, rgb, rgba, hex, hsl) */
+}
+
+
+span{
+      background-color: lightgreen;
+        /* Span ek INLINE element hota hai, isliye width/height nahi le sakta,
+         ismein background sirf text ke area tak hi apply hota hai */
+}
+
+
+
+h2{
+      background-color: lightsalmon;
+      display: inline-block;
+       /* display: inline-block → Inline ki tarah same line me rahta hai
+         + Block ki tarah width / height set ki ja sakti hai
+         Iska use tab hota hai jab inline + block dono features chahiye */
+}
+
+
+
+h3{
+      display: none;
+       /* display: none → Element browser se puri tarah hide ho jata hai,
+         SCREEN par dikhai nahi dega aur JAGAH bhi occupy nahi karega
+         (visibility:hidden se different — wo space occupy karta hai) */
+         visibility: hidden;
+}
+
+
+
+#box1{
+      background-color: lightcoral;
+      display: inline-block;
+      width: 50%;
+      height: 200px;
+        /* display:inline-block → Box ko same line me rakhne ki permission deta hai
+         width:50% → Parent container ke width ka aadha lega
+         height:200px → Fixed vertical height
+         
+         🔥 Important:
+         50% + 50% = 100% hota hai, lekin INLINE-BLOCK me
+         BETWEEN ELEMENTS ek extra *2-4px char space* bhi count hota hai
+         (HTML me space/newline hone ki wajah se)
+
+         Isi extra space ki wajah se box1 + box2 total width 100% se thoda zyada
+         ho jati hai → isliye second box next line me shift ho jata hai!
+      */
+}
+#box2{
+      background-color: rgb(234, 4, 4);
+      display: inline-block;
+      width: 50%;
+      height: 200px;
+           /* Problem same as box1:
+         display:inline-block box ke beech white-space create karta hai
+         isliye 50% + 50% + white-space > 100% ho jata hai
+         aur box2 next line pe chala jata hai */
+}
