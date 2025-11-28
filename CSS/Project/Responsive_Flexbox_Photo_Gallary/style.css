@@ -1,0 +1,47 @@
+
+     
+      *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+      }
+      .gallary{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex: 1;
+            gap: 10px;
+            justify-content:space-around;
+      }
+      .gallary img{
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);   
+           
+      }
+      h1{
+            text-align: center;
+            margin: 20px;
+      }
+       .scrollable{
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            border-bottom: 2px solid rgb(196, 193, 193);
+            border-top: 2px solid rgb(196, 193, 193);
+           
+       }
+       .scrollable::-webkit-scrollbar{
+            display: none;
+       }
+      .scrollable img{
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            padding: 5px;
+            
+      }
+     
