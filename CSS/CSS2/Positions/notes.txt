@@ -1,0 +1,49 @@
+📌 CSS — Position Property
+
+The position property in CSS is used to decide how an element is positioned in a webpage. Different values change how the element behaves in the layout.
+
+1️⃣ position: sticky
+
+When position: sticky is applied with top, left, right, or bottom, the element becomes sticky while scrolling.
+
+It behaves like a normal element initially, but when the page scrolls to the given offset (e.g., top: 0), the element sticks to that position and stays fixed.
+
+2️⃣ position: fixed
+
+When position: fixed is applied with top, left, right, or bottom, the element remains fixed on the screen even while scrolling.
+
+It does not take space in the normal layout — it floats above the content.
+
+It always stays at the assigned position, and other text/content remains behind it.
+
+3️⃣ position: static
+
+This is the default position for every HTML element.
+
+When an element has position: static, its top, left, right, and bottom properties do not work.
+
+The element stays in the normal document flow.
+
+4️⃣ position: relative & position: absolute
+
+These two properties are connected to each other.
+
+🔹 position: relative
+
+The element remains in the normal flow, but you can move it relative to its original position using top/left/right/bottom.
+
+🔹 position: absolute
+
+The element is removed from the normal flow and positioned relative to its nearest positioned ancestor.
+
+If an element with position: absolute is inside a box with position: relative, then the absolute element is positioned according to the relative parent box.
+
+If no parent has position: relative, then absolute positioning is based on the document (body).
+
+🔍 Summary Table
+Property	Stays in Normal Flow?	Moves on Scroll?	  Takes Space in Layout?	   Positioned Relative To
+static	✔️ Yes	                ✔️ Yes	                  ✔️ Yes	        Normal flow
+relative	✔️ Yes	                  ✔️ Yes	            ✔️ Yes	       Itself (original spot)
+absolute	❌ No	                       ✔️ Yes	                  ❌ No	         Nearest positioned parent / document
+fixed	      ❌ No	                      ❌ No (always fixed)	     ❌ No	          Viewport / Screen
+sticky	✔️ Yes until offset	    ❌ after offset	     ✔️ Yes       	Scroll position
