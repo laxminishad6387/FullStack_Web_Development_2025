@@ -1,0 +1,56 @@
+📌 CSS — Display Property
+
+The display property in CSS specifies how an HTML element is displayed on a webpage. There are different display values used for different behaviors of elements.
+
+1️⃣ display: block
+
+Elements with display: block always start on a new line.
+
+They take full width of the available space (100% width by default).
+
+We can set width and height of block-level elements.
+
+Examples:
+<div>, <p>, <h1> - <h6>, <section>
+
+2️⃣ display: inline
+
+Elements with display: inline do not start on a new line.
+
+They take only required width, not full width.
+
+We cannot set width and height for inline elements.
+
+Examples:
+<span>, <a>, <strong>
+
+3️⃣ display: inline-block
+
+It behaves like inline (does not start a new line).
+
+But width and height can be set like block elements.
+
+Best when you want elements to sit in one line with adjustable size.
+
+Example:
+<img>, custom inline-block elements using CSS
+
+4️⃣ display: none
+
+The element is completely removed from the DOM visually.
+
+It does not occupy any space on the screen.
+
+➡️ Useful for hiding elements dynamically using JavaScript.
+
+5️⃣ visibility: hidden
+
+The element becomes invisible, but still occupies space on the page.
+
+The element is present in the DOM but hidden from view.
+
+Difference:
+
+Property	         Visible?	     Space Occupied?
+display: none	    ❌ No	       ❌ No
+visibility: hidden    ❌ No	      ✅ Yes
