@@ -44,4 +44,35 @@
             padding: 5px;
             
       }
+
+     
+      .bolls{
+            width: 20px;
+            height: 20px;
+            background-color: teal;
+           margin-right: 3px;
+            border-radius: 100%;
+            display: inline-block;
+            animation: boll 10s linear 0s infinite alternate ;
+            
+      }
+      @keyframes boll{
+            0%{
+                  transform: translateX(0vw);
+                  background-color: teal;
+            }
+             50%{
+                  transform: translateX(50vw);
+                  background-color: teal;
+            }
+             100%{
+                  transform: translateX(100vw);
+                  background-color: teal;
+            }
+      }
+      h2{
+            text-align: center;
+            margin: 20px;
+      }
+    
      
