@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>animation</title>
+      <style>
+           
+            #container{
+                  width:200px;
+                  height:200px;
+                  background-color: coral;
+                  border-radius: 100%;
+
+                  /* 
+                     🔥 ANIMATION PROPERTY EXPLANATION (Easy Learning)
+
+                     animation: name duration timing-function delay iteration-count direction;
+
+                     1️⃣ name → @keyframes ka naam (yaha move)
+                     2️⃣ duration → total animation time (3s)
+                     3️⃣ timing-function → speed pattern (linear = constant speed)
+                     4️⃣ delay → animation start hone se pehle rukne ka time (1s)
+                     5️⃣ iteration-count → animation kitni baar chale (infinite = hamesha chale)
+                     6️⃣ direction → animation ki direction (alternate = left → right → left)
+
+                     ⏳ Final used property:
+                     move      3s     linear      1s         infinite     alternate
+                  */
+                  animation: move 3s linear 1s infinite alternate;
+            }
+
+            @keyframes move{
+                  /* 0% → Starting position (bilkul left border se start) */
+                  0%{
+                        transform: translateX(0vw);
+                        background-color: coral;
+                  }
+
+                  /* 50% → Animation ka midpoint (center ke aspas) */
+                  50%{
+                        transform: translateX(50vw);
+                        background-color: lightseagreen;
+                  }
+
+                  /* 100% → Right border ko touch kare bina screen ke bahar na jaye */
+                  100%{
+                        transform: translateX(calc(100vw - 200px));
+                        background-color: coral;
+                  }
+            }
+      </style>
+</head>
+<body>
+      <div id="container"></div>
+</body>
+</html>
