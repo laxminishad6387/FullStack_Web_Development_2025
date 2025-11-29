@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Transition and transform</title>
+      <style>
+            button{
+                  padding:10px 25px;
+                     /* padding → button ke content ke around spacing add karta hai
+                     Values: px, %, em, rem etc.
+                     10px (top-bottom) 25px (left-right) → button size visually bada ban jata hai */
+
+
+                  background-color: teal;
+                   /* Button ka default background color teal set */
+
+
+                  margin: 50px;
+             /* Button ke 4 sides me 50px ka outer gap — page ke middle me visible ho jata hai */
+
+
+                  color:white;
+                     /* Text ka color white — background ke saath contrast banane ke liye */
+
+
+
+                 border: none;
+                    /* Default browser border remove kar deta hai */
+
+
+                 border-radius: 5px;
+                  /* Button ke corners ko curve karta hai
+                     Values:
+                        0px → sharp corners
+                        50% → fully round (pill button)
+                        100% → circle (square element me use hota hai) */
+
+
+                 cursor: pointer;
+                     /* Hover karte waqt mouse arrow → hand icon ban jata hai */
+
+
+                 font-size: larger;
+                    /* Text size ko default se bada karta hai
+                     Values: small, medium, large, x-large, px, rem etc. */
+
+
+                     
+
+                  
+                  /* TRANSITION → Smooth animation lagane ke liye use hota hai
+                     Syntax format:
+                       transition: property duration timing-function delay;
+
+                     ↓ Neeche comment ki types samajhne ke liye optional examples: ↓
+
+                        transition: background 10s ease 1s;
+                        transition: background 5s ease-in 1s;
+                        transition: background 5s ease-out 1s;
+                        transition: background 5s ease-in-out 1s;
+                        transition: transform 5s ease-in-out 1s;
+
+                     ↓ Final jis line ka use ho raha hai ↓ */
+                      transition: all 5s ease-in-out 1s;
+                         /* transition: all → hover ke time jitni bhi properties change hongi sab smooth animate hongi
+                     5s → animation complete hone ka time
+                     ease-in-out → animation start slow, beech fast, end slow
+                     1s → hover hone ke 1 second baad transition start hogi (delay) */
+            }
+            button:hover{
+                  background-color: rgb(246, 161, 4);
+                  transform: scale(1.5);
+                     /* Button ko 1.5x zoom karega (50% bada)
+                     Values:
+                       scale(1) → original size
+                       scale(2) → 2x bada
+                       scale(0.5) → half size, smaller
+                       transform: rotate(), translate(), skew() bhi use ho sakte hain*/
+            }
+      </style>
+</head>
+<body>
+      <button>Click me</button>
+</body>
+</html>
