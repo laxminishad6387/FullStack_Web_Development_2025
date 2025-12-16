@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> inbox(33+)</title>
+    <link rel="icon" href="./gallary/gmail_logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+      <style>
+            *{
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+            /* navbar**************************** */
+            .navbar{
+                  
+                  height: 80px;
+                  width: 100vw;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+                position: sticky;
+                top: 0px;
+                background-color: white;
+                
+            }
+            .navbar-left{
+                
+                  margin-left: 40px;
+                  display: flex;
+                  align-items: center;
+            }
+           
+          
+            .navbar-left img{
+                  width: 100px;
+                  height: 80px;
+                  margin-left: 10px;
+
+            }
+            .navbar-left i{
+                    font-size: 20px;
+                    color: black;
+                    cursor: pointer;
+            }
+
+            .navbar-middle{
+                  width: 45%;
+                  height: 50px;
+                  border-radius: 30px;
+                  background-color: rgb(241, 240, 240);
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                justify-content: space-between;
+                  padding: 0 20px;
+                  font-size: 18px;
+                  color: gray;
+                  cursor: pointer;
+            
+            }
+            .navbar-right{
+                height: 50px;  
+                  width: 15%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: end;
+                 gap: 20px;
+                  font-size: 20px;
+                   cursor: pointer;
+                      color: rgb(36, 36, 36);
+            }
+           .navbar-right .fa-user-circle{
+            margin-right: 30px;
+           }
+
+/* end navbar****************************** */
+
+
+            .container{
+                 
+                  height: 100vh;
+                  width: 100vw;
+                  display: grid;
+                  grid-template-columns: 1fr 4fr;
+                  grid-template-rows: 1fr;
+
+            }
+
+            /* laft part******************* */
+            .section-1{
+                    position: static;
+                top: 80px;
+            }
+           
+            .section-1 button{
+                  width: 150px;
+                  color: #001d35;
+                      /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0), 0 1px 3px 1px rgba(0, 0, 0, 0); */
+                          background-color: #c2e7ff;
+                          border: none;
+                          padding: 20px;
+                          border-radius: 15px;
+                          margin-left: 20px;
+                          margin-top: 25px;
+                         
+            }
+             .section-1 button i{
+                  margin-right: 10px;
+             }
+             .section-1-menu{
+                  margin-top: 30px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  margin-left: 20px;
+             }
+             .active i{
+                  margin-right: 15px;
+             }
+             .more{
+                  margin-left: 20px;
+                  margin-top: 10px;
+             }
+
+            /* section 1 end************************ */
+             /* section-2 start************************* */
+          
+            .section-2-top-part{
+                  display: grid;
+                  grid-template-columns: 20% 20% 20% auto;
+                  background-color: white;
+                  height: 60px;
+                  align-content: center;
+                  border-bottom: 1px solid rgb(193, 190, 190);
+                  margin-top: 10px;
+                  color: rgb(73, 72, 72);
+                    position: sticky;
+                top: 80px;
+                  
+            }
+            .section-2-bottom-part{
+                  background-color: yellow;
+                  height: calc(100vh - 60px);
+                  display: flex;
+                  flex-direction: column;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                
+            }
+             .section-2-bottom-part::-webkit-scrollbar{
+                  display: none;
+             }
+             .section-2-bottom-part-email-list{
+                  display: flex;
+                  flex-direction: row;
+                  background-color: white;
+                  border-bottom: 1px solid rgb(205, 203, 203);
+             }
+
+             .section-2-bottom-part-email-list-left{
+                  width: 30%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 10px;
+                    font-weight: bold;
+             }
+             .section-2-bottom-part-email-list-left i{
+                  color: rgb(247, 247, 41);
+             }
+             .section-2-bottom-part-email-list-middle{
+                  width: 55%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 5px;
+                  padding: 10px;
+                
+             }
+             .section-2-bottom-part-email-list-right{
+                  width: 15%;
+                  display: flex;
+                  align-items: center;
+                  padding: 10px;
+                  font-weight: bold;
+             }
+          
+
+
+            
+      </style>
+</head>
+<body>
+      <div class="navbar">
+            <div class="navbar-left">
+                <i class="fa-solid fa-bars"></i>
+
+                <img src="./gallary/gmail_logo2.png" alt="gmail_logo2">  
+            </div>
+            <search class="navbar-middle">
+                  <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                         Search
+                        </div>
+                         <i class="fa-solid Search filter	fa-sliders"></i></search>
+            <div class="navbar-right">
+                 <i class="fa-solid fa-circle-question"></i>
+                 <i class="fa-solid fa-gear"></i>
+                 <i class="fa-solid fa-grip"></i>
+                 <i class="fa-solid fa-user-circle"></i> 
+            </div>
+      </div>
+
+<!-- main content******************** -->
+      <div class="container">
+            <!-- section-1 -->
+            <div class="section-1">
+                  <button> <i class="fa-solid fa-pen-to-square"></i>Compose</button>
+                  <div class="section-1-menu">
+                        <div class="section-1-menu-inbox active">
+                               <i class="fa-solid fa-inbox"></i> Inbox
+                        </div>
+                        <div class="section-1-menu-starred active">
+                               <i class="fa-solid fa-star"></i> Starred
+                        </div>
+                        <div class="section-1-menu-snoozed active">
+                               <i class="fa-solid fa-clock"></i> Snoozed
+
+                        </div>
+                        <div class="section-1-menu-drafts active">
+                               <i class="fa-solid fa-paper-plane"></i> Drafts
+
+                        </div>
+                        <div class="section-1-menu-purchases active">
+                               <i class="fa-solid fa-file-lines"></i> Purchases
+
+                        </div>
+                        <details>
+                               <summary>More</summary>
+                               <div class="section-1-menu-more-important active more">
+                                     <i class="fa-solid fa-user-circle"></i> Important
+
+                        </div>
+                         <div class="section-1-menu-more-schedules active more">
+                               <i class="fa-solid fa-user-circle"></i> Schedules
+
+                        </div>
+                        </details>
+
+                  </div>
+            </div>
+
+
+
+<!-- section-2 -->
+            <div class="section-2">
+                  <div class="section-2-top-part">
+                        <div class="section-2-top-part-primary">
+                             <i class="fa-solid fa-inbox"></i> 
+                             Primary
+                        </div>
+                         <div class="section-2-top-part-promotions">
+                             <i class="fa-solid fa-tag"></i> 
+                             Promotions
+                        </div>
+                         <div class="section-2-top-part-social">
+                             <i class="fa-solid fa-user-group"></i> 
+                             Social
+                        </div>
+                        <div class="section-2-top-part-updates">
+                             <i class="fa-solid fa-circle-info"></i> 
+                             Updates
+                        </div>
+                  </div>
+
+
+                  <div class="section-2-bottom-part">
+                        <div class="section-2-bottom-part-email-list ">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                         <div class="section-2-bottom-part-email-list">
+                              <div class="section-2-bottom-part-email-list-left">
+                                    <input type="checkbox" name="" id="">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>PW Skills</span>
+                              </div>
+                              <div class="section-2-bottom-part-email-list-middle">
+                                    <span>Welcome to PW Skills !</span>
+                                    <span> - Get started with your learning journey...</span>
+                              </div>
+                              <span class="section-2-bottom-part-email-list-right">
+ 
+                                    Dec 20
+                              </span>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>
