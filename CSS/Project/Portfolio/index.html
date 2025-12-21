@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>portfolio</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+     <style>
+     :root {
+            --text-color: #1a1c20;
+            --link-color: #4a76ee;
+             --background-color: #eeeff1;
+            }
+      *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+          
+      }
+      .container{
+         
+            min-height: 100%;
+            width: 100%;
+            background-color: var(--background-color);
+           
+      }
+      .navbar{
+            height: 75px;
+           
+            margin: 0% 7%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+      }
+      .navbar-left{
+            font-size: 28px;
+            color:var(--text-color);
+      }
+      .navbar-right a{
+            text-decoration: none;
+            font-size: 20px;
+            color: var(--text-color);
+            margin-right: 10px;
+      }
+      .navbar-right button{
+            padding: 5px 20px;
+            font-size: 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+      }
+      /* navbar part end***************************** */
+
+      /* main part 1 start***************************** */
+      .main-part1{
+          
+           height: 500px;
+            margin: 0% 7%;
+            display: flex;
+                 flex-direction: row;
+                 align-items: center;
+      }
+      .main-part1-right img{
+            height: 300px;
+            width: 300px;
+            border: 5px solid black;
+            border-radius: 50%;
+       
+      }
+      .main-part1-left{
+            margin-right: 50px;
+      }
+      .main-part1-left h1{
+            margin-bottom: 10px;
+            font-size: 48px;
+      }
+      .main-part1-left p{
+           margin-bottom: 20px;
+           font-size: 20px; 
+           color: var(--text-color);
+           line-height: 30px;
+      }
+      .main-part1-left-button button{
+            padding: 10px 20px;
+            border:2px solid var(--link-color);
+            margin-right: 5px;
+            border-radius: 5px;
+
+      }
+      .main-part1-left-button button i{
+            color: #4a76ee;
+      }
+        .main-part1-left-button button span{
+            display: inline-block;
+            font-size: 20px;
+            color: #4a76ee;
+        }
+
+        /* main part 1 end******************************** */
+
+        /* main part 2 start ************************** */
+        .skills-section{
+            margin: 0% 7%;
+        }
+        .skills-section h1{
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 35px;
+            font-weight:bolder;
+        }
+         .skills-section p{
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 25px;
+            color: var(--text-color);
+            line-height: 30px;
+            
+        }
+        .skills-section-button{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100px;
+            justify-content: space-around;
+        }
+      
+          .skills-section-button button{
+          display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+           
+          }
+        .skills-section-button button img{
+                width: 30px;
+                   height: 30px;
+                   object-fit: contain;
+                   border-radius: 2px;
+        }
+
+        /* main part 2 end ************************************** */
+
+        /* main part 3 start ***************************** */
+        .main-part3{
+          
+           height: 400px;
+           margin-top: 5%;
+           margin-bottom: 0%;
+           margin-left: 7%;
+           margin-right: 7%;
+            display: flex;
+                 flex-direction: row;
+                 align-items: center;
+     
+        }
+        .main-part3-left img{
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+            border-radius: 50%;
+        }
+      .main-part3-left{
+            margin-right: 50px;
+      }
+      .main-part3-left h1{
+            margin-bottom: 10px;
+            font-size: 38px;
+      }
+      .main-part3-left div{
+            margin-top: 20px;
+           
+      }
+       .main-part3-left div h3{
+            text-align:center;
+
+       }
+        .main-part3-left div p{
+            text-align: center;
+            color:var(--text-color);
+        }
+        .main-part3-right{
+            font-size: 28px;
+            color: var(--text-color);
+            line-height: 35px;
+        }
+
+        /* main part 3 end********************************************************** */
+
+        /* main part 4 start************************************************ */
+           .main-part4{
+          
+           height: 500px;
+            margin: 0% 7%;
+            display: flex;
+                 flex-direction: row;
+                 align-items: center;
+     
+        }
+        .main-part4-left{
+            width:50%;
+            margin-right: 50px;
+        }
+        
+         .main-part4-left h1{
+            margin-bottom: 10px;
+            font-size: 38px;
+      }
+
+      .main-part4-left p{
+            /* text-align: center; */
+            color:var(--text-color);
+            font-size: 25px;
+            line-height: 30px;
+        }
+        .main-part4-right{
+           width: 50%;
+        }
+        .main-part4-right div input , .main-part4-right div textarea , .main-part4-right div button{
+            width: 600px;
+            height: 50px;
+            margin: 5px;
+            border: 2px solid var(--link-color);
+        }
+         .main-part4-right div textarea{
+            height: 200px;
+         }
+         .main-part4-right div label {
+            margin-left: 5px;
+            font-size: 20px;
+            color: var(--text-color);
+         }
+         .main-part4-right div button{
+            background-color: var(--link-color);
+            color: white;
+            font-size: 20px;
+         }
+     </style>
+</head>
+<body>
+     
+            <div class="container">
+
+                  <!-- navbar start******************* -->
+                 <div class="navbar">
+                   <h3 class="navbar-left">Money Care</h3>
+                   <div class="navbar-right">
+                        <a href="https://github.com/laxminishad6387">
+                              <i class="fa-brands fa-github"></i>
+                              <span>Gmail</span></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i>
+                              <span>LinkedIn</span></a>
+                        <button><i class="fa-solid fa-envelope"></i>
+                              <span>Email</span></button>
+
+                   </div>
+                 </div>
+
+                 <!-- navbar end*********************** -->
+                  <!-- manin part1 start************************ -->
+
+                 <div class="main-part1">
+                    <div class="main-part1-left">
+                        <h1>Hi, I'm Laxmi Nishad 👋</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto, provident aperiam. Iste, repellat aperiam!</p>
+                        <div class="main-part1-left-button">
+                              <button><i class="fa-solid fa-code"></i>
+                              <span>skills</span></button>
+
+                              <button><i class="fa-solid fa-pen-to-square"></i>
+                              <span>Testimony</span></button>
+
+                              <button><i class="fa-solid fa-address-book"></i>
+                              <span>Contect</span></button>
+                        </div>
+                    </div>
+
+                    <div class="main-part1-right">
+                        <img src="./gallary/profile.webp" alt="">
+                    </div>
+                 </div>
+
+                 <!-- main part 1 end **************************** -->
+
+                 <!-- main part 2 start -->
+                  <div class="skills-section">
+                        <h1>Skills</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?</p>
+                        <div class="skills-section-button">
+                              <button><img src="./gallary/html-logo.webp" alt="html"><span>HTML</span></button>
+                              <button><img src="./gallary/css-logo.webp" alt="css"><span>CSS</span></button>
+                              <button><img src="./gallary/javascript-logo.webp" alt="js"><span>JAVASCRIPT</span></button>
+                              <button><img src="./gallary/react-logo.webp" alt="rect"><span>React.js</span></button>
+                              <button><img src="./gallary/node-logo.webp" alt=""><span>Node.js</span></button>
+                        </div>
+                  </div>
+
+
+                  <!-- main part 2 end *********************** -->
+
+                  <!-- main part 3 start -->
+                    <div class="main-part3">
+                        <div class="main-part3-left">
+                              <h1>Testimony</h1>
+                              <img src="./gallary/profile.webp" alt="">
+                        <div>
+                              <h3>Testing King</h3>
+                              <p>Lorem ipsum dolor sit.</p>
+                        </div>
+                    </div>
+                    <div class="main-part3-right">
+                        <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque quaerat nostrum laborum? Rem adipisci natus eos nemo reprehenderit, cumque nostrum enim commodi. Eum, enim vero eveniet doloremque sed veniam. Doloremque explicabo non reprehenderit expedita! Accusamus mollitia repellendus dolorum officiis libero quod deleniti cum."</p>
+                        </div>
+                    </div>
+
+                    <!-- main part 3 end *********************************** -->
+
+                     <!-- main part 4 start************************************ -->
+                       <div class="main-part4">
+                        <div class="main-part4-left">
+                           
+                              <h1>Contact</h1>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugit maiores atque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae, iusto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis..</p>
+                      
+                    </div>
+                    <form class="main-part4-right">
+                        <div>
+                              <label for="username">Name</label><br>
+                              <input type="text" name="name" id="username">
+                        </div>
+                        <div>
+                              <label for="useremail">Email</label><br>
+                              <input type="email" name="email" id="useremail">
+                        </div>
+                        <div>
+                              <label for="usermessage">Message</label><br>
+                            <textarea name="message" id="usermessage" rows="10" cols="20"></textarea>
+                        </div>
+                        <div>
+                              <button>Send Message</button>
+                        </div>
+                       </form>
+                    </div>
+
+                    
+
+
+
+
+
+
+                 </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+      padding: 0px;
+      width: 0px;
+      box-sizing: border-box;
+ 
+}
+
+
+.container{
+  min-height: 100%;
+  width: 100%;
+
+
+}
+.navbar{
+      display: flex;
+   flex-direction: row;
+}
