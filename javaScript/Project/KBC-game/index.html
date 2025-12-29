@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KBC game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="welcomeScreen">
+      <div class="container">
+        <label>Enter your username to start</label>
+        <input id="username" type="text" placeholder="Enter your username">
+        <small class="error" id="usernameError"></small>
+        <button class="button" onclick="startGame()">Start game</button>
+      </div>
+    </div>
+    <div id="quizArea" class="hide">
+      <div class="questionArea">
+        <div class="question">
+          <div id="timer">30</div>
+          <div id="questionStatement"></div>
+          <div id="answers">
+
+          </div>
+        </div>
+      </div>
+      <div class="levelArea">
+        <ul id="levelList"></ul>
+      </div>
+    </div>
+    <div id="resultScreen" class="hide">
+      <div class="container">
+        <h1 id="message">Better luck next time!</h1>
+        <h3 id="priceMoney">You won:</h3>
+        <button class="button" onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
